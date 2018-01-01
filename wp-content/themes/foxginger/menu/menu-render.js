@@ -12,7 +12,7 @@ function renderMenu() {
 
         for (var o = 0; o < section.subsections.length; o++) {
 
-            var subsectionDiv = $('<div>').addClass('col-xs-12'),
+            var subsectionDiv = $('<div>'),
                 list = $('<ul>').addClass('menu__ul');
 
             $('<h3>').addClass('menu__subsection-title')

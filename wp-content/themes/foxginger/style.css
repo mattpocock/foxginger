@@ -32,7 +32,8 @@ p {
   opacity: 0.85; }
 
 .content-area {
-  background-color: #eee; }
+  background-color: #eee;
+  padding-bottom: 40px; }
 
 /* Elements */
 /* Buttons */
@@ -42,6 +43,7 @@ p {
   display: inline-block;
   padding: 0px 50px;
   margin: 0;
+  border: none;
   color: white;
   font-family: 'Khand', sans-serif;
   /* Old browsers */
@@ -56,6 +58,13 @@ p {
     background-position: 0 0; }
   .slide-button:visited {
     color: white; }
+
+.disabled {
+  opacity: 0.4;
+  cursor: default;
+  background: #333; }
+  .disabled:hover {
+    background-position: 100% 100%; }
 
 /* Price Indicator */
 .price-box {
@@ -102,14 +111,21 @@ p {
     font-family: 'Great Vibes', serif;
     margin: 0;
     margin-bottom: 15px; }
+    @media (max-width: 992px) {
+      .title-text__container h1 {
+        font-size: 40px;
+        text-align: center; } }
   .title-text__container h2 {
     line-height: 35px;
     font-size: 27px;
     font-weight: 300;
     font-family: 'Khand', sans-serif;
     margin: 0;
-    margin-bottom: 10px;
-    display: inline-block; }
+    margin-bottom: 10px; }
+    @media (max-width: 992px) {
+      .title-text__container h2 {
+        text-align: center;
+        font-size: 20px; } }
 
 .title-text__link:hover {
   text-decoration: none; }
@@ -126,6 +142,9 @@ p {
 .title-text__buttons {
   margin-top: 15px;
   margin-bottom: 100px; }
+  @media (max-width: 992px) {
+    .title-text__buttons {
+      text-align: center; } }
 
 /* Food Showcase */
 .food-showcase__container {
@@ -205,33 +224,106 @@ p {
       background: transparent; }
 
 /* Basket */
-.basket {
-  font-family: 'Cormorant Garamond', serif; }
-  .basket .basket__total-price {
-    margin: 10px 0px 0px 0px; }
-  .basket ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'Khand', sans-serif; }
-    .basket ul li:nth-child(odd) {
-      background-color: #ddd; }
-  .basket li {
-    width: 100%;
+.basket .basket__title {
+  display: block;
+  line-height: 60px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #333;
+  margin: 0;
+  padding-left: 10px; }
+.basket ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Khand', sans-serif; }
+.basket li {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background-color: #ddd; }
+  .basket li .basket__item-title {
+    margin-left: 10px; }
+  .basket li div {
+    float: right;
+    width: 50px;
+    text-align: center; }
+  .basket li a {
+    background: linear-gradient(to left, #777 50%, #E07503 50%);
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+    float: right;
+    display: block;
     height: 35px;
-    line-height: 35px; }
-    .basket li .basket__item-title {
-      margin-left: 10px; }
-    .basket li div {
-      float: right;
-      width: 50px;
-      text-align: center; }
-    .basket li a {
-      float: right;
-      display: block;
-      height: 35px;
-      line-height: 35px;
-      font-size: 15px;
-      padding: 0px 10px; }
+    line-height: 35px;
+    font-size: 15px;
+    padding: 0px 10px; }
+
+.basket__total-price {
+  height: 45px;
+  line-height: 45px;
+  position: relative; }
+  .basket__total-price h3 {
+    display: inline-block;
+    margin: 0;
+    line-height: 45px;
+    z-index: 5;
+    position: absolute;
+    left: 10;
+    font-size: 20px;
+    font-family: 'Khand', sans-serif;
+    color: white; }
+  .basket__total-price a {
+    right: 0;
+    line-height: 45px;
+    height: 45px;
+    width: 100%;
+    padding: 0px 10px 0px 0px;
+    position: absolute;
+    text-align: right;
+    z-index: 4; }
+
+.mobile-basket-button {
+  font-size: 40px;
+  padding: 20px;
+  color: white;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 999;
+  background: linear-gradient(to left, #E07503 50%, #666 50%);
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+  transition: background-position 0.5s ease;
+  cursor: pointer; }
+  .mobile-basket-button:hover {
+    color: white;
+    text-decoration: none;
+    background-position: 0 0; }
+
+/* Order */
+.order-display__title, .order-display__total {
+  font-family: 'Cormorant Garamond', serif; }
+
+#order-display ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  #order-display ul li:nth-child(odd) {
+    background-color: #ddd; }
+#order-display li {
+  font-family: 'Khand', sans-serif;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px; }
+
+.order-form p {
+  margin-top: 15px;
+  margin-bottom: 0px; }
+.order-form input[type="text"], .order-form textarea {
+  width: 100%;
+  margin-bottom: 2px; }
+.order-form textarea {
+  resize: none; }
 
 /*# sourceMappingURL=style.css.map */

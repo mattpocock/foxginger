@@ -46,6 +46,7 @@ p {
 
 .content-area {
     background-color: #eee;
+    padding-bottom: 40px;
 }
 
 /* Elements */
@@ -58,6 +59,7 @@ p {
     display: inline-block;
     padding: 0px 50px;
     margin: 0;
+    border: none;
     color: white;
     font-family: 'Khand', sans-serif;
     /* Old browsers */
@@ -77,6 +79,15 @@ p {
         color: white;
     }
 
+}
+
+.disabled {
+    opacity: 0.4;
+    cursor: default;
+    background: #333;
+    &:hover {
+        background-position: 100% 100%;
+    }
 }
 
 /* Price Indicator */
@@ -133,6 +144,8 @@ p {
 
 /* Title */
 
+$md: 992px;
+
 .title-text__container {
     margin-top: 100px;
     color: #333;
@@ -142,6 +155,11 @@ p {
         font-family: 'Great Vibes', serif;
         margin: 0;
         margin-bottom: 15px;
+
+        @media (max-width: $md) {
+            font-size: 40px;
+            text-align: center;
+        }
     }
 
     h2 {
@@ -151,7 +169,11 @@ p {
         font-family: 'Khand', sans-serif;
         margin: 0;
         margin-bottom: 10px;
-        display: inline-block;
+
+        @media (max-width: $md) {
+            text-align: center;
+            font-size: 20px;
+        }
 
     }
 
@@ -180,6 +202,10 @@ p {
 
     margin-top: 15px;
     margin-bottom: 100px;
+
+    @media (max-width: $md) {
+        text-align: center;
+    }
 }
 
 /* Food Showcase */
@@ -296,10 +322,13 @@ $li-height: 35px;
 
 .basket {
 
-    font-family: 'Cormorant Garamond', serif;
-
-    .basket__total-price {
-        margin: 10px 0px 0px 0px;
+    .basket__title {
+        display: block;
+        line-height: 60px;
+        font-family: 'Cormorant Garamond', serif;
+        color: #333;
+        margin: 0;
+        padding-left: 10px;
     }
     
     ul {
@@ -307,16 +336,13 @@ $li-height: 35px;
         padding: 0;
         margin: 0;
         font-family: 'Khand', sans-serif;
-
-        li:nth-child(odd) {
-            background-color: #ddd;
-        }
     }
 
     li {
         width: 100%;
         height: $li-height;
         line-height: $li-height;
+        background-color: #ddd;
 
         .basket__item-title {
             margin-left: 10px;
@@ -329,6 +355,9 @@ $li-height: 35px;
         }
 
         a {
+            background: linear-gradient(to left, #777 50%, $orange 50%);
+            background-size: 200% 100%;
+            background-position: 100% 100%;
             float: right;
             display: block;
             height: $li-height;
@@ -336,5 +365,97 @@ $li-height: 35px;
             font-size: 15px;
             padding: 0px 10px;
         }
+    }
+}
+
+.basket__total-price {
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+
+    h3 {
+        display: inline-block;
+        margin: 0;
+        line-height: 45px;
+        z-index: 5;
+        position: absolute;
+        left: 10;
+        font-size: 20px;
+        font-family: 'Khand', sans-serif;
+        color: white;
+    }
+
+    a {
+        right: 0;
+        line-height: 45px;
+        height: 45px;
+        width: 100%;
+        padding: 0px 10px 0px 0px;
+        position: absolute;
+        text-align: right;
+        z-index: 4;
+    }
+}
+
+.mobile-basket-button {
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 999;
+    background: linear-gradient(to left, $orange 50%, #666 50%);
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+    transition: background-position 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+        background-position: 0 0;
+    }
+}
+
+/* Order */
+
+.order-display__title, .order-display__total {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#order-display {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li:nth-child(odd) {
+            background-color: #ddd;
+        }
+    }
+
+    li {
+        font-family: 'Khand', sans-serif;
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+    }
+}
+
+.order-form {
+    p {
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    input[type="text"], textarea {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    textarea {
+        resize: none;
     }
 }

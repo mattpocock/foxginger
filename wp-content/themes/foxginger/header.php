@@ -15,20 +15,29 @@
 <section class="home-background">
     <div class="container nav-bar__container">
         <div class="nav-bar">
-            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
         </div>
         <div class="row">
             <div class="col-xs-12 title-text__container">
-                <a href="/" class="title-text__link">
+                <a href="<?php echo get_site_url()?>" class="title-text__link">
                     <h1 class="title-text">Foxglove & Ginger</h1>
                 </a>
                 <h2 class="subtitle-text">Authentic East African & Indian Cuisine</h2>
             </div>
         </div>
         <div class="row">
-        <div class="col-xs-12 title-text__buttons">
-            <a class="slide-button">Menu</a>
-        </div>
+
+        <?php
+
+        if (get_the_title() !== "Menu") {
+
+            echo '<div class="col-xs-12 title-text__buttons">
+                <a class="slide-button" href="' . get_site_url() .'/menu">Menu</a>
+            </div>';
+        } else {
+            echo '<div style="margin-bottom: 80px"/>';
+        }
+        ?>
         </div>
     </div>
 
