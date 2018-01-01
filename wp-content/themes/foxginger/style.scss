@@ -1,0 +1,340 @@
+/* Variables */
+
+$green: #62A928;
+$orange: #E07503;
+
+/* Presets */
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h2, h3, h4, h5, h6, p {
+    font-family: 'Khand', sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Background */
+
+.home-background {
+    background-color: #fff;
+}
+
+.fish-background {
+    background-image: url("https://www.georgestradition.co.uk/wp-content/uploads/2015/12/gluten.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.85;
+}
+
+.tapas-background {
+    background-image: url("https://d1wb0ukcj65cfk.cloudfront.net/restaurant_original/296f49ca-4084-4fce-ae67-94928a73ca2d.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.85;
+}
+
+.chicken-background {
+    background-image: url("https://siliconeer.com/current/wp-content/uploads/2017/06/PAGE-RECIPE-JEERA-CHICKEN-01-SLIDER-DSC_4857.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.85;
+}
+
+.content-area {
+    background-color: #eee;
+}
+
+/* Elements */
+
+/* Buttons */
+
+.slide-button {
+    font-size: 20px;
+    line-height: 45px;
+    display: inline-block;
+    padding: 0px 50px;
+    margin: 0;
+    color: white;
+    font-family: 'Khand', sans-serif;
+    /* Old browsers */
+    background: linear-gradient(to left, #62A928 50%, #E07503 50%);
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+    transition: background-position 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+        background-position: 0 0;
+    }
+
+    &:visited {
+        color: white;
+    }
+
+}
+
+/* Price Indicator */
+
+.price-box {
+    height: 45px;
+    padding: 0px 10px;
+    color: #333;
+    font-family: 'Khand', sans-serif;
+    display: inline-block;
+    background-color: #eee;
+    margin: 0;
+
+    span {
+        line-height: 45px;
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+/* Nav Bar */
+
+.nav-bar__container {
+    position: relative;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-left: 20px;
+
+            a {
+                font-family: 'Khand', sans-serif;
+                color: #333;
+                transition: all 0.2s;
+
+                &:hover {
+                    color: #333;
+                    text-decoration: none;
+                    opacity: 0.6;
+                }
+            }
+
+        }
+    }
+}
+
+/* Title */
+
+.title-text__container {
+    margin-top: 100px;
+    color: #333;
+
+    h1 {
+        font-size: 70px;
+        font-family: 'Great Vibes', serif;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        line-height: 35px;
+        font-size: 27px;
+        font-weight: 300;
+        font-family: 'Khand', sans-serif;
+        margin: 0;
+        margin-bottom: 10px;
+        display: inline-block;
+
+    }
+
+}
+
+.title-text__link {
+    &:hover {
+        text-decoration: none;
+    }
+    h1 {
+        color: #333;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.6;
+            color: #333;
+            text-decoration: none;
+        }
+        &:visited {
+            color: #333;
+        }
+    }
+}
+
+.title-text__buttons {
+
+    margin-top: 15px;
+    margin-bottom: 100px;
+}
+
+/* Food Showcase */
+
+.food-showcase__container {
+    color: white;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+    h1 {
+        line-height: 45px;
+        font-size: 45px;
+        font-family: 'Cormorant Garamond', serif;
+        margin: 0;
+    }
+
+    h2 {
+        line-height: 24px;
+        font-size: 20px;
+        margin: 20px 0px;
+        font-family: 'Khand', sans-serif;
+    }
+
+    p {
+        margin: 0;
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 16px;
+        font-style: italic;
+    }
+
+}
+
+.food-showcase__dark-spot {
+    background-color: rgba(0,0,0,0.8);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Page */
+
+.page-heading {
+    margin: 40px 0px;
+    font-size: 40px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Footer */
+
+.social-links {
+    box-sizing: border-box;
+    padding: 40px;
+    text-align: center;
+    
+    a {
+        font-size: 30px;
+        color: #666;
+        padding: 0px 5px;
+        transition: all 0.2s;
+
+        &:hover {
+            opacity: 0.6;
+            color: #666;
+        }
+    }
+}
+
+/* Menu */
+
+.menu__section-title, .menu__subsection-title {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.menu__ul {
+    list-style: none;
+    padding: 0;
+
+    li:nth-child(odd) {
+        background-color: #ddd;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+        height: 45px;
+
+        span {
+            line-height: 45px;
+            vertical-align: middle;
+            font-size: 16px;
+            margin-left: 10px;
+            font-family: 'Khand', sans-serif;
+        }
+
+        a {
+            float: right;
+            font-size: 16px;
+            padding: 0px 10px;
+            height: 45px;
+        }
+
+        div {
+            float: right;
+            width: 60px;
+            font-size: 20px;
+            background: transparent;
+        }
+    }
+}
+
+/* Basket */
+
+$li-height: 35px;
+
+.basket {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    .basket__total-price {
+        margin: 10px 0px 0px 0px;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-family: 'Khand', sans-serif;
+
+        li:nth-child(odd) {
+            background-color: #ddd;
+        }
+    }
+
+    li {
+        width: 100%;
+        height: $li-height;
+        line-height: $li-height;
+
+        .basket__item-title {
+            margin-left: 10px;
+        }
+
+        div {
+            float: right;
+            width: 50px;
+            text-align: center;
+        }
+
+        a {
+            float: right;
+            display: block;
+            height: $li-height;
+            line-height: $li-height;
+            font-size: 15px;
+            padding: 0px 10px;
+        }
+    }
+}
