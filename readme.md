@@ -3,7 +3,7 @@
 A Wordpress site for my local Indian takeaway.
 
 ## Important Files
-
+```
 wp-content
 |
 |-- themes
@@ -15,7 +15,7 @@ wp-content
 |   |   |-- page-templates
 |   |   |-- style.scss
 |   |   |-- index.php
-
+```
 ### Menu
 
 Here, you'll find all the jQuery functions for the menu and the shopping basket.
