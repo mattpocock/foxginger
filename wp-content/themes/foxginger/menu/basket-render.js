@@ -43,9 +43,10 @@ function renderBasket() {
                 .html('<span>' + shoppingBasket.items[i].amount + '</span>')
                 .appendTo(li);
                 
-        // Here, we need to know if the li has been newly created,
-        // so we can animate it. Add a bool to it so that it knows
-        // it's new, so that it can go display: none then slideDown();
+        /* Here, we need to know if the li has been newly created,
+         * so we can animate it. Add a bool to it so that it knows
+         * it's new, so that it can go display: none then slideDown();
+         */
         li.appendTo(list);
 
     }
@@ -72,7 +73,6 @@ function renderBasket() {
         
 
     total.appendTo(basketDiv);
-
     basketDiv.appendTo(menu);
 
     $('.slide-down').slideDown();

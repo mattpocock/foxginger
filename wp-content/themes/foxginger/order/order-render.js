@@ -1,6 +1,7 @@
 var shoppingBasket = {};
 
 function renderOrder() {
+    // Gets localStorage
     shoppingBasket = JSON.parse(localStorage.getItem('basket'));
 
     var orderDisplay = $('#order-display'),

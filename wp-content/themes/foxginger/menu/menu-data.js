@@ -77,7 +77,3 @@ var MENU_DATA = {
         }
     ]
 }
-
-document.onload = function() {
-
-}

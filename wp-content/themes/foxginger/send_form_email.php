@@ -1,27 +1,19 @@
 <?php
 if(isset($_POST['email'])) {
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
+
     $email_to = "mpocock@me.com";
     $email_subject = "Contact from Foxglove & Ginger";
  
     function died($error) {
-        // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
+        echo "We are very sorry, but there were errors found with the form you submitted. ";
         die();
     }
- 
- 
-    // validation expected data exists
+    
     if(!isset($_POST['name']) ||
         !isset($_POST['email'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
  
-     
     $ordertext = $_POST['ordertext']; // required
     $name = $_POST['name']; // required
     $email_from = $_POST['email']; // required
@@ -35,7 +27,7 @@ if(isset($_POST['email'])) {
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
  
   if(strlen($error_message) > 0) {
-    died($error_message);
+      died($error_message);
   }
  
     $email_message = "Form details below.\n\n";
@@ -45,8 +37,6 @@ if(isset($_POST['email'])) {
       $bad = array("content-type","bcc:","to:","cc:","href");
       return str_replace($bad,"",$string);
     }
- 
-     
  
     $email_message .= "Order: ".clean_string($ordertext)."\n";
     $email_message .= "Name: ".clean_string($name)."\n";

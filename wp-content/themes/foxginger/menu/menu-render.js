@@ -1,7 +1,9 @@
+// Renders menu
 function renderMenu() {
 
     var menu = $('#menu');
 
+    // Iterates over sections
     for (var i = 0; i < MENU_DATA.sections.length; i++) {
         
         var sectionDiv = $('<div>').addClass('col-xs-12 col-md-7'),
@@ -10,6 +12,7 @@ function renderMenu() {
         $('<h2>').addClass('menu__section-title').html(section.title).appendTo(sectionDiv);
         $('<p>').addClass('menu__section-desc').html(section.desc).appendTo(sectionDiv);
 
+        // Iterates over subsections
         for (var o = 0; o < section.subsections.length; o++) {
 
             var subsectionDiv = $('<div>'),
